@@ -6,9 +6,11 @@ app.set('view engine', 'ejs')
 
 app.get('/', (req, res) => {
 	let name = "Jardel Pavan Bazi"
+	let is_active = false
 
 	res.render('index', {
-		name: name
+		name,
+		is_active
 	})
 })
 
