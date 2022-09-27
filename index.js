@@ -4,6 +4,12 @@ const port = 3000
 
 app.set('view engine', 'ejs')
 
-app.get('/', (req, res) => res.render('index'))
+app.get('/', (req, res) => {
+	let name = "Jardel Pavan Bazi"
+
+	res.render('index', {
+		name: name
+	})
+})
 
 app.listen(port, () => console.log("APP rodando!"))
