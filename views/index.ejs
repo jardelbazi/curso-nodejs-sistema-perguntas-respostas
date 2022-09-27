@@ -8,7 +8,7 @@
 </head>
 <body>
 	<h1>Guia de Perguntas e Respostas</h1>
-	
+
 	<h5><%= name %></h5>
 
 	<% if(is_active){ %>
@@ -16,6 +16,13 @@
 	<% } else { %>
 		<h6>Desativado</h6>
 	<% } %>
+
+	<ul>
+		<% users.forEach((user) => { %>
+			<li><%= user.name %> - <%= user.age %> Anos</li>
+		<% }) %>
+	</ul>
+	
 
 </body>
 </html>

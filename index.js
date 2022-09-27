@@ -8,8 +8,15 @@ app.get('/', (req, res) => {
 	let name = "Jardel Pavan Bazi"
 	let is_active = false
 
+	let users = [
+		{name: "Jardel Bazi" ,age: 37},
+		{name: "Jaine Jover" ,age: 22},
+		{name: "Poliana" ,age: 35},
+	]
+
 	res.render('index', {
 		name,
+		users,
 		is_active
 	})
 })
