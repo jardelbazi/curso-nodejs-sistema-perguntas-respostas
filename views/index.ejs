@@ -1,29 +1,8 @@
-<!DOCTYPE html>
-<html lang="pt-BR">
-<head>
-	<meta charset="UTF-8">
-	<meta http-equiv="X-UA-Compatible" content="IE=edge">
-	<meta name="viewport" content="width=device-width, initial-scale=1.0">
-	<title>Guia de Perguntas</title>
-	<link rel="stylesheet" href="/css/style.css">
-</head>
-<body>
-	<h1>Guia de Perguntas e Respostas</h1>
+<%- include('partials/header') %>
+<%- include('partials/nav') %>
 
-	<h5><%= name %></h5>
+<div class="container">
+	INDEX
+</div>
 
-	<% if(is_active){ %>
-		<h6>É ativo</h6>
-	<% } else { %>
-		<h6>Desativado</h6>
-	<% } %>
-
-	<ul>
-		<% users.forEach((user) => { %>
-			<li><%= user.name %> - <%= user.age %> Anos</li>
-		<% }) %>
-	</ul>
-	
-
-</body>
-</html>
+<%- include('partials/footer') %>
