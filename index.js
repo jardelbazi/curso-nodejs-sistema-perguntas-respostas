@@ -1,5 +1,12 @@
 const express  = require("express")
 const bodyParser  = require("body-parser")
+const connection = require('./database')
+const Ask = require('./models/Ask')
+
+connection
+	.authenticate()
+	.then(() => console.log("Conexão com MYSQL"))
+	.catch((error) => console.log(error))
 
 const app = express()
 const port = 3000
