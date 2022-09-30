@@ -2,7 +2,24 @@
 <%- include('partials/nav') %>
 
 <div class="container">
-	INDEX
+	<div class="row">
+		<div class="col-md-12 mb-5">
+			<h1>Perguntas</h1>
+			<a href="/ask/create" class="btn btn-primary">Cadastrar Pergunta</a>
+		</div>
+	</div>
+
+	<% asks.forEach(ask => { %>
+		<div class="card mb-3">
+			<div class="card-body">
+				<%= ask.title %>
+			</div>
+			<div class="card-footer">
+				<a href="/ask/<%= ask.id %>" class="btn btn-primary">Cadastrar Pergunta</a>
+			</div>
+		</div>
+	<% }) %>
+
 </div>
 
 <%- include('partials/footer') %>
